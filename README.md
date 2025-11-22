@@ -27,13 +27,7 @@ You must provide your specific AWS details using a Terraform variables file.
 <!-- end list -->
 
 ```terraform
-# The ARN of the existing IAM Role used by the Lambda function.
 # This role MUST have permissions to start/stop EC2 instances and write to CloudWatch.
 lambda_role_arn = "arn:aws:iam::123456789012:role/YourExistingLambdaExecutionRole"
 
-# The ID of the EC2 instance you want to manage.
 instance_id = "i-0abcdef1234567890" 
-
-# Optional: Override default times (0 8 * * ? * = 8:00 AM UTC)
-# start_time = "0 8 * * ? *" 
-# stop_time = "0 20 * * ? *"
