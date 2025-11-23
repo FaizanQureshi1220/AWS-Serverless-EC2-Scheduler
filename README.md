@@ -24,6 +24,30 @@ You must provide your specific AWS details using a Terraform variables file.
 1.  Create a file named **`terraform.tfvars`** in the project's root directory.
 2.  Add the following variables to the file, replacing the placeholder values with your actual ARN and ID:
 
+### Execution
+
+Run the following commands in your terminal:
+
+1.  **Initialize the Directory:**
+
+    ```bash
+    terraform init
+    ```
+
+2.  **Review the Plan:** (Ensure you are satisfied with the resources Terraform will create.)
+
+    ```bash
+    terraform plan
+    ```
+
+3.  **Deploy the Infrastructure:**
+
+    ```bash
+    terraform apply
+    ```
+    (Type `yes` to confirm.)
+
+
 
 ## ✅ Validation
 
@@ -38,11 +62,6 @@ The key lines confirming success are:
 
 <!-- end list -->
 
-```terraform
-# This role MUST have permissions to start/stop EC2 instances and write to CloudWatch.
-lambda_role_arn = "arn:aws:iam::123456789012:role/YourExistingLambdaExecutionRole"
-
-instance_id = "i-0abcdef1234567890"
 
 
 
