@@ -19,16 +19,15 @@ variable "start_time" {
   
     description = "This is the starting time of the EC2 instances"
     type = string
-    default = "0 8 * * ? *"
+    default = "0 11 * * ? *"
 
 }
-
 
 variable "stop_time" {
   
     description = "This is the stopping time of the EC2 instances"
     type = string
-    default = "0 20 * * ? *"
+    default = "3 11 * * ? *"
 
 }
 
