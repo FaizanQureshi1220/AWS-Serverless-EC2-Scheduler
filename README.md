@@ -24,13 +24,6 @@ You must provide your specific AWS details using a Terraform variables file.
 1.  Create a file named **`terraform.tfvars`** in the project's root directory.
 2.  Add the following variables to the file, replacing the placeholder values with your actual ARN and ID:
 
-<!-- end list -->
-
-```terraform
-# This role MUST have permissions to start/stop EC2 instances and write to CloudWatch.
-lambda_role_arn = "arn:aws:iam::123456789012:role/YourExistingLambdaExecutionRole"
-
-instance_id = "i-0abcdef1234567890"
 
 ## ✅ Validation
 
@@ -42,3 +35,15 @@ The key lines confirming success are:
 
   * `Instance {EC2_INSTANCE_ID} is in 'stopped' state. Proceeding to start.`
   * `Start command issued for Instance {EC2_INSTANCE_ID}.`
+
+<!-- end list -->
+
+```terraform
+# This role MUST have permissions to start/stop EC2 instances and write to CloudWatch.
+lambda_role_arn = "arn:aws:iam::123456789012:role/YourExistingLambdaExecutionRole"
+
+instance_id = "i-0abcdef1234567890"
+
+
+
+
