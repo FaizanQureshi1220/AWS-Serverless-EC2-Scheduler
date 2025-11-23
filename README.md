@@ -30,4 +30,15 @@ You must provide your specific AWS details using a Terraform variables file.
 # This role MUST have permissions to start/stop EC2 instances and write to CloudWatch.
 lambda_role_arn = "arn:aws:iam::123456789012:role/YourExistingLambdaExecutionRole"
 
-instance_id = "i-0abcdef1234567890" 
+instance_id = "i-0abcdef1234567890"
+
+## ✅ Validation
+
+The following logs from AWS CloudWatch confirm the Lambda function was successfully triggered by EventBridge and executed the Boto3 command to start the EC2 instance.
+
+<img width="2681" height="1210" alt="Image" src="https://github.com/user-attachments/assets/78a9d6a7-c47d-40cd-9704-2d6b50414b3c" />
+
+The key lines confirming success are:
+
+  * `Instance {EC2_INSTANCE_ID} is in 'stopped' state. Proceeding to start.`
+  * `Start command issued for Instance {EC2_INSTANCE_ID}.`
